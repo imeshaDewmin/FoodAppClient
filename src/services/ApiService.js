@@ -24,7 +24,7 @@ export default class ApiService {
 
     //check if a user has a specific role
     static hasRole(role) {
-        const roles = this.getRoles;
+        const roles = this.getRoles();
 
         return roles ? role.includes(role) : false;
     }
@@ -47,7 +47,7 @@ export default class ApiService {
     }
 
     static isAuthenticated() {
-        const token = this.getToken;
+        const token = this.getToken();
 
         return !!token;
     }
