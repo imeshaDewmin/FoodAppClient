@@ -39,9 +39,9 @@ const Navbar = () => {
                     <>
                         {isCustomer && (
                             <Link to="/cart" className="nav-link">Cart</Link>,
-                             <Link to="/orders" className="nav-link">Orders</Link>
+                            <Link to="/orders" className="nav-link">Orders</Link>
                         )}
-            
+
 
                         {isDelivery && (
                             <Link to="/deliveries" className="nav-link">Deliveries</Link>

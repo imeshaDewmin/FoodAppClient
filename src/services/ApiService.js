@@ -26,7 +26,7 @@ export default class ApiService {
     static hasRole(role) {
         const roles = this.getRoles();
 
-        return roles ? role.includes(role) : false;
+        return roles ? roles.includes(role) : false;
     }
 
     static isAdmin() {
