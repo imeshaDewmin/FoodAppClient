@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RegisterPage from "./components/auth/RegisterPage";
 import LoginPage from "./components/auth/LoginPage";
 import HomePage from "./components/home_menu/HomePage";
+import CategoryPage from "./components/home_menu/CategoryPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/home' element={<HomePage />} />
+          <Route path='/categories' element={<CategoryPage />} />
         </Routes>
       </div>
       <Footer />
