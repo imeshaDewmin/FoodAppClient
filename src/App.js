@@ -6,6 +6,7 @@ import RegisterPage from "./components/auth/RegisterPage";
 import LoginPage from "./components/auth/LoginPage";
 import HomePage from "./components/home_menu/HomePage";
 import CategoryPage from "./components/home_menu/CategoryPage";
+import MenuPage from "./components/home_menu/MenuPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/home' element={<HomePage />} />
           <Route path='/categories' element={<CategoryPage />} />
+          <Route path='/menu' element={<MenuPage />} />
         </Routes>
       </div>
       <Footer />
