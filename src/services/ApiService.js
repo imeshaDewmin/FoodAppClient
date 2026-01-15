@@ -53,12 +53,16 @@ export default class ApiService {
     }
 
     static getHeader() {
-        const token = this.getToken;
-        return {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json"
+        const token = this.getToken();
+        const headers = { "Content-Type": "application/json" };
+
+        if (token) {
+            headers.Authorization = `Bearer ${token}`;
         }
+
+        return headers;
     }
+
 
 
     //Register a user
@@ -304,7 +308,9 @@ export default class ApiService {
     //REVIEW SECTION
 
     static async getMenuAverageOverallReview(menuId) {
-        const resp = await axios.get(`${this.BASE_URL}/review/menu/rating/${menuId}`);
+        const resp = await axios.get(`${this.BASE_URL}/review/menu/rating/${menuId}`, {
+            headers: this.getHeader()
+        });
         return resp.data;
     }
 
