@@ -8,6 +8,7 @@ import HomePage from "./components/home_menu/HomePage";
 import CategoryPage from "./components/home_menu/CategoryPage";
 import MenuPage from "./components/home_menu/MenuPage";
 import MenuDetailsPage from "./components/home_menu/MenuDetailsPage";
+import ProfilePage from "./components/profile_cart/ProfilePage";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path='/categories' element={<CategoryPage />} />
           <Route path='/menu' element={<MenuPage />} />
           <Route path='/menu/:id' element={<MenuDetailsPage />} />
+
+          <Route path='/profile' element={<ProfilePage />} />
         </Routes>
       </div>
       <Footer />
