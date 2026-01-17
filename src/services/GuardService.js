@@ -3,7 +3,7 @@ import ApiService from "./ApiService";
 
 
 export const CustomerRoute=({element:Component})=>{
-    const location = useLocation
+    const location = useLocation();
 
     return ApiService.isCustomer()?(
         Component
@@ -15,7 +15,7 @@ export const CustomerRoute=({element:Component})=>{
 
 
 export const AdminRoute=({element:Component})=>{
-    const location = useLocation
+    const location = useLocation();
 
     return ApiService.isAdmin()?(
         Component
