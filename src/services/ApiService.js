@@ -88,13 +88,20 @@ export default class ApiService {
         return response.data;
     }
 
-    static async updateProfile(formData) {
-        const response = await axios.put(`${this.BASE_URL}/users/update`, {
-            headers: this.getHeader(),
-            'Content-Type': 'multipart/form-data'
-        }, formData)
-        return response.data;
-    }
+  static async updateProfile(formData) {
+    const response = await axios.put(
+        `${this.BASE_URL}/users/update`,
+        formData,
+        {
+            headers: {
+                ...this.getHeader(),
+                'Content-Type': 'multipart/form-data'
+            }
+        }
+    );
+    return response.data;
+}
+
 
     static async deactivateAccount() {
         const response = await axios.delete(`${this.BASE_URL}/users/deactivate`, {

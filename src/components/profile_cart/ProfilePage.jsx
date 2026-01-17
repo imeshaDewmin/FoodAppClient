@@ -19,7 +19,7 @@ export default function ProfilePage() {
                     showError(response.message)
                 }
             } catch (error) {
-                showError(error.response?.message || error.message)
+                showError(error.response?.data?.message || error.message)
             }
         }
         fetchProfile()

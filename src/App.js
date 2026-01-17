@@ -9,6 +9,7 @@ import CategoryPage from "./components/home_menu/CategoryPage";
 import MenuPage from "./components/home_menu/MenuPage";
 import MenuDetailsPage from "./components/home_menu/MenuDetailsPage";
 import ProfilePage from "./components/profile_cart/ProfilePage";
+import UpdateProfilePage from "./components/profile_cart/UpdateProfilePage";
 
 function App() {
   return (
@@ -18,12 +19,14 @@ function App() {
         <Routes>
           <Route path='/register' element={<RegisterPage />} />
           <Route path='/login' element={<LoginPage />} />
+          
           <Route path='/home' element={<HomePage />} />
           <Route path='/categories' element={<CategoryPage />} />
           <Route path='/menu' element={<MenuPage />} />
           <Route path='/menu/:id' element={<MenuDetailsPage />} />
 
           <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/profile/update' element={<UpdateProfilePage />} />
         </Routes>
       </div>
       <Footer />
