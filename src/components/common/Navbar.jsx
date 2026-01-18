@@ -35,31 +35,28 @@ const Navbar = () => {
                 <Link to="/menu" className="nav-link">Menu</Link>
                 <Link to="/categories" className="nav-link">Categories</Link>
 
-                {isAuthenticated ? (
+                {isAuthenticated && (
                     <>
                         {isCustomer && (
-                            <Link to="/cart" className="nav-link">Cart</Link>,
-                            <Link to="/orders" className="nav-link">Orders</Link>
+                            <>
+                                <Link to="/cart" className="nav-link">Cart</Link>
+                                <Link to="/orders" className="nav-link">Orders</Link>
+                            </>
                         )}
-
 
                         {isDelivery && (
                             <Link to="/deliveries" className="nav-link">Deliveries</Link>
                         )}
+
                         {isAdmin && (
                             <Link to="/admin" className="nav-link">Admin</Link>
                         )}
 
                         <Link to="/profile" className="nav-link">Profile</Link>
                         <button className="nav-button" onClick={handleLogOut}>Log Out</button>
-
-                    </>
-                ) : (
-                    <>
-                        <Link to="/login" className="nav-link">Login</Link>
-                        <Link to="/register" className="nav-link">Register</Link>
                     </>
                 )}
+
             </div>
         </nav>
     )
